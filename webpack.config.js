@@ -1,5 +1,5 @@
 const path = require('path')
-
+const webpack = require('webpack')
 const { VueLoaderPlugin } = require('vue-loader')
 
 module.exports = {
@@ -15,7 +15,13 @@ module.exports = {
     path: path.resolve(__dirname, './dist'),
   },
   plugins: [
-    new VueLoaderPlugin()
+    new VueLoaderPlugin(),
+    new webpack.ProvidePlugin({
+      process: 'process/browser',
+    }),
+    new webpack.EnvironmentPlugin({
+      BASE_URL: "https://localhost:8000"
+    })
   ],
   module: {
     rules: [

@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/tksumanth1994/vue3-repo#readme",
   "dependencies": {
+    "process": "^0.11.10",
     "register-service-worker": "^1.7.2",
     "vue": "^3.0.11"
   },
