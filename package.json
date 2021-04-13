@@ -1,0 +1,38 @@
+{
+  "name": "vue3-repo",
+  "version": "1.0.0",
+  "description": "vue3 task for GosuGamers",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack serve --mode=\"development\"",
+    "build": "webpack --mode=\"production\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tksumanth1994/vue3-repo.git"
+  },
+  "author": "tksumanth1994@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tksumanth1994/vue3-repo/issues"
+  },
+  "homepage": "https://github.com/tksumanth1994/vue3-repo#readme",
+  "dependencies": {
+    "register-service-worker": "^1.7.2",
+    "vue": "^3.0.11"
+  },
+  "devDependencies": {
+    "@vue/compiler-sfc": "^3.0.11",
+    "css-loader": "^5.2.1",
+    "node-sass": "^5.0.0",
+    "sass": "^1.32.8",
+    "sass-loader": "^11.0.1",
+    "ts-loader": "^8.1.0",
+    "typescript": "^4.2.4",
+    "vue-loader": "^16.2.0",
+    "vue-style-loader": "^4.1.3",
+    "webpack": "^5.32.0",
+    "webpack-cli": "^4.6.0",
+    "webpack-dev-server": "^3.11.2"
+  }
+}
