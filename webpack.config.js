@@ -1,6 +1,7 @@
-const path = require('path')
-const webpack = require('webpack')
-const { VueLoaderPlugin } = require('vue-loader')
+const path = require('path');
+const webpack = require('webpack');
+const { VueLoaderPlugin } = require('vue-loader');
+const WorkboxPlugin = require('workbox-webpack-plugin');
 
 module.exports = {
   entry: './src/main.ts',
@@ -22,7 +23,11 @@ module.exports = {
     new webpack.EnvironmentPlugin({
       BASE_URL: "https://localhost:8000",
       GITHUB_API_KEY: "abcd"
-    })
+    }),
+    new WorkboxPlugin.GenerateSW({
+      clientsClaim: true,
+      skipWaiting: true,
+    }),
   ],
   module: {
     rules: [
