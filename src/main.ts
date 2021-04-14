@@ -1,5 +1,7 @@
 import { createApp } from 'vue'
-import "./registerServiceWorker";
+import axios from 'axios'
+import VueAxios from 'vue-axios'
+// import "./registerServiceWorker";
 import App from './App.vue'
 
-createApp(App).mount('#app')
+createApp(App).use(VueAxios, axios).mount('#app')

@@ -1,7 +1,6 @@
 const path = require('path')
 const webpack = require('webpack')
 const { VueLoaderPlugin } = require('vue-loader')
-const workboxPlugin = require('workbox-webpack-plugin')
 
 module.exports = {
   entry: './src/main.ts',
@@ -21,12 +20,8 @@ module.exports = {
       process: 'process/browser',
     }),
     new webpack.EnvironmentPlugin({
-      BASE_URL: "https://localhost:8000"
-    }),
-    new workboxPlugin({
-      globDirectory: "dist",
-      globPatterns: ['**/*.{html,js,css}'],
-      swDest: path.join("dist", 'sw.js'),
+      BASE_URL: "https://localhost:8000",
+      GITHUB_API_KEY: "abcd"
     })
   ],
   module: {
